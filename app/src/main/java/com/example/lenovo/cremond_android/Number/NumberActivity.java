@@ -31,7 +31,7 @@ public class NumberActivity extends AppCompatActivity {
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
-                case 0: cur_fragment = new NumberFragment("일","one",R.drawable.number_one); break;
+                case 0: cur_fragment = new NumberFragment("일","one",R.drawable.ex1); break;
                 case 1: cur_fragment = new NumberFragment("이","two",R.drawable.number_two); break;
                 case 2: cur_fragment = new NumberFragment("삼","three",R.drawable.number_three); break;
                 case 3: cur_fragment = new NumberFragment("사","four",R.drawable.number_four); break;

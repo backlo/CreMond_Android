@@ -4,37 +4,66 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".Plant.PlantFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="30dp"
-        android:layout_weight="5">
+        android:background="@drawable/layout_rounded"
+        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/plantfragment_korean"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="left|center"
-            android:layout_weight="1"
-            android:text="korean"/>
+            android:orientation="horizontal"
+            android:paddingTop="40dp"
+            android:paddingLeft="40dp"
+            android:paddingRight="40dp"
+            android:layout_weight="3">
 
-        <TextView
-            android:id="@+id/plantfragment_vietnamese"
+            <TextView
+                android:fontFamily="@font/namugothic"
+                android:id="@+id/plantfragment_korean"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textSize="40dp"
+                android:layout_weight="1"
+                android:text="korean"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="right"
+                    android:src="@drawable/activity_home"/>
+
+                <TextView
+                    android:fontFamily="@font/namugothic"
+                    android:id="@+id/plantfragment_vietnamese"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom"
+                    android:textSize="25dp"
+                    android:layout_weight="1"
+                    android:text="vietnamese"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/plantfragment_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="right|center"
-            android:layout_weight="1"
-            android:text="vietnamese"/>
+            android:layout_weight="1"/>
 
     </LinearLayout>
-
-    <ImageView
-        android:id="@+id/plantfragment_image"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"/>
 
 </LinearLayout>
