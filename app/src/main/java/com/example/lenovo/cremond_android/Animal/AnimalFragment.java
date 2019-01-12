@@ -8,20 +8,17 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import com.example.lenovo.cremond_android.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class AnimalFragment extends Fragment {
 
-    @BindView(R.id.animalfragment_korean)
-    TextView korean;
-    @BindView(R.id.animalfragment_vietnamese)
-    TextView vietnamese;
-    @BindView(R.id.animalfragment_image)
-    ImageView image;
+    @BindView(R.id.animalfragment_korean) TextView korean;
+    @BindView(R.id.animalfragment_vietnamese) TextView vietnamese;
+    @BindView(R.id.animalfragment_image) ImageView image;
 
     String korean_name, vietnamese_name;
     int image_id;
@@ -46,6 +43,11 @@ public class AnimalFragment extends Fragment {
         image.setImageResource(image_id);
 
         return view;
+    }
+
+    @OnClick(R.id.animalfragment_home_btn)
+    public void backButton(){
+        getActivity().onBackPressed();
     }
 
 }

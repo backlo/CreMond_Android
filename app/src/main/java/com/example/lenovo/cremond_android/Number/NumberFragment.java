@@ -14,15 +14,13 @@ import com.example.lenovo.cremond_android.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class NumberFragment extends Fragment {
 
-    @BindView(R.id.numberfragment_korean)
-    TextView korean;
-    @BindView(R.id.numberfragment_vietnamese)
-    TextView vietnamese;
-    @BindView(R.id.numberfragment_image)
-    ImageView image;
+    @BindView(R.id.numberfragment_korean) TextView korean;
+    @BindView(R.id.numberfragment_vietnamese) TextView vietnamese;
+    @BindView(R.id.numberfragment_image) ImageView image;
 
     String korean_name, vietnamese_name;
     int image_id;
@@ -47,6 +45,11 @@ public class NumberFragment extends Fragment {
         image.setImageResource(image_id);
 
         return view;
+    }
+
+    @OnClick(R.id.numberfragment_home_btn)
+    public void backButton(){
+        getActivity().onBackPressed();
     }
 
 }
