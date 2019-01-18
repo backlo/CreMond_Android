@@ -179,7 +179,7 @@
                         android:id="@+id/vehicle_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/vehicle_spaceship"
+                        android:src="@drawable/ex2"
                         android:layout_weight="1"/>
 
                     <TextView
@@ -236,10 +236,13 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:layout_marginTop="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="20dp"
                     android:id="@+id/number_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/number_hundred"
+                    android:src="@drawable/exnumber_one"
                     android:layout_weight="1"/>
 
                 <TextView

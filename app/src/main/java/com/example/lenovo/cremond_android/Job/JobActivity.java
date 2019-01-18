@@ -31,21 +31,21 @@ public class JobActivity extends AppCompatActivity {
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
-                case 0: cur_fragment = new JobFragment("의사","doctor",R.drawable.job_doctor); break;
-                case 1: cur_fragment = new JobFragment("간호사","nurse",R.drawable.job_nurse); break;
-                case 2: cur_fragment = new JobFragment("소방관","firefighter",R.drawable.job_firefighter); break;
-                case 3: cur_fragment = new JobFragment("경찰관","policeOfficer",R.drawable.job_policeofficer); break;
-                case 4: cur_fragment = new JobFragment("선생님","teacher",R.drawable.job_teacher); break;
-                case 5: cur_fragment = new JobFragment("과학자","scientist",R.drawable.job_scientist); break;
-                case 6: cur_fragment = new JobFragment("군인","soldier",R.drawable.job_soldier); break;
-                case 7: cur_fragment = new JobFragment("운동선수","athlete",R.drawable.job_athlete); break;
-                case 8: cur_fragment = new JobFragment("요리사","cook",R.drawable.job_cook); break;
-                case 9: cur_fragment = new JobFragment("화가","artist",R.drawable.job_artist); break;
-                case 10: cur_fragment = new JobFragment("파일럿","pilot",R.drawable.job_pilot); break;
-                case 11: cur_fragment = new JobFragment("운전사","driver",R.drawable.job_driver); break;
-                case 12: cur_fragment = new JobFragment("건축가","architect",R.drawable.job_architect); break;
-                case 13: cur_fragment = new JobFragment("가수","singer",R.drawable.job_singer); break;
-                case 14: cur_fragment = new JobFragment("사진사","photographer",R.drawable.job_photographer); break;
+                case 0: cur_fragment = new JobFragment("의사","Bác sĩ",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_doctor); break;
+                case 1: cur_fragment = new JobFragment("간호사","Y tá",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_nurse); break;
+                case 2: cur_fragment = new JobFragment("소방관","Lính cứu hỏa",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_firefighter); break;
+                case 3: cur_fragment = new JobFragment("경찰관","Cảnh sát",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_policeofficer); break;
+                case 4: cur_fragment = new JobFragment("선생님","Giáo viên",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_teacher); break;
+                case 5: cur_fragment = new JobFragment("과학자","Nhà khoa học",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_scientist); break;
+                case 6: cur_fragment = new JobFragment("군인","soldier",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_soldier); break;
+                case 7: cur_fragment = new JobFragment("운동선수","Vận động viên",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_athlete); break;
+                case 8: cur_fragment = new JobFragment("요리사","Đầu bếp",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_cook); break;
+                case 9: cur_fragment = new JobFragment("화가","Họa sĩ",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_artist); break;
+                case 10: cur_fragment = new JobFragment("파일럿","Phi công",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_pilot); break;
+                case 11: cur_fragment = new JobFragment("운전사","Tài xế",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_driver); break;
+                case 12: cur_fragment = new JobFragment("건축가","Kiến trúc sư",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_architect); break;
+                case 13: cur_fragment = new JobFragment("가수","Ca sĩ",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_singer); break;
+                case 14: cur_fragment = new JobFragment("사진사","Nhiếp ảnh gia",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.job_photographer); break;
             }
             return cur_fragment;
         }

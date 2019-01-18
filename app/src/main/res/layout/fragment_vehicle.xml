@@ -18,8 +18,8 @@
             android:layout_height="match_parent"
             android:orientation="horizontal"
             android:paddingTop="40dp"
-            android:paddingLeft="40dp"
-            android:paddingRight="40dp"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
             android:layout_weight="3">
 
             <TextView
@@ -33,9 +33,10 @@
                 android:text="korean"/>
 
             <LinearLayout
+                android:paddingLeft="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:layout_weight="1.5"
                 android:orientation="vertical">
 
                 <ImageView
@@ -51,7 +52,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:gravity="bottom"
-                    android:textSize="25dp"
+                    android:textSize="20dp"
                     android:layout_weight="1"
                     android:text="vietnamese"/>
 
@@ -60,6 +61,7 @@
         </LinearLayout>
 
         <ImageView
+            android:layout_margin="20dp"
             android:id="@+id/vehiclefragment_image"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

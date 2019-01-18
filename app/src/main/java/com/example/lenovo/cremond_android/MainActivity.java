@@ -42,8 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.vehicle_image) ImageView vehicle_image;
     @BindView(R.id.vehicle_text) TextView vehicle_text;
 
-    private static final long MIN_CLICK_INTEVAL = 600;
-    private long mLastClickTime;
+    private long mLastClickTime=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -54,11 +53,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.animal_text, R.id.animal_image})
     public void animalOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, AnimalActivity.class);
         startActivity(i);
@@ -66,11 +63,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.body_text, R.id.body_image})
     public void bodyOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, BodyActivity.class);
         startActivity(i);
@@ -78,11 +73,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.color_text, R.id.color_image})
     public void colorOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, ColorActivity.class);
         startActivity(i);
@@ -91,11 +84,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.job_text, R.id.job_image})
     public void jobOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, JobActivity.class);
         startActivity(i);
@@ -103,11 +94,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.number_text, R.id.number_image})
     public void numberOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, NumberActivity.class);
         startActivity(i);
@@ -115,11 +104,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.objects_text, R.id.objects_image})
     public void objectsOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, ObjectsActivity.class);
         startActivity(i);
@@ -127,11 +114,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.plant_text, R.id.plant_image})
     public void plantOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, PlantActivity.class);
         startActivity(i);
@@ -139,11 +124,9 @@ public class MainActivity extends AppCompatActivity {
 
     @OnClick({R.id.vehicle_text, R.id.vehicle_image})
     public void vehicleOnClick(){
-        long currentClickTime = SystemClock.uptimeMillis();
-        long elapsedTime = currentClickTime - mLastClickTime;
-        mLastClickTime = currentClickTime;
-
-        if(elapsedTime <= MIN_CLICK_INTEVAL) return;
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
 
         Intent i = new Intent(MainActivity.this, VehicleActivity.class);
         startActivity(i);
