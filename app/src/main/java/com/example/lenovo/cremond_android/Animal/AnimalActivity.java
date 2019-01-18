@@ -37,7 +37,7 @@ public class AnimalActivity extends AppCompatActivity {
                 case 1: cur_fragment = new AnimalFragment("고양이","Con Mèo",R.raw.animal_cat_korean,R.raw.animal_cat_vietnamese,R.drawable.animal_cat); break;
                 case 2: cur_fragment = new AnimalFragment("기린","Hươu cao cổ",R.raw.animal_giraffe_korean,R.raw.animal_giraffe_vietnamese,R.drawable.animal_giraffe); break;
                 case 3: cur_fragment = new AnimalFragment("다람쥐","Con sóc",R.raw.animal_squirrel_korean,R.raw.animal_squirrel_vietnamese,R.drawable.animal_squirrel); break;
-                case 4: cur_fragment = new AnimalFragment("돼지","Con lợn",R.raw.animal_pig_korean,R.raw.animal_pig_vietnamese,R.drawable.animal_pig); break;
+                case 4: cur_fragment = new AnimalFragment("돼지","Con lợn \nCon heo",R.raw.animal_pig_korean,R.raw.animal_pig_vietnamese,R.drawable.animal_pig); break;
                 case 5: cur_fragment = new AnimalFragment("말","Con Ngựa",R.raw.animal_horse_korean,R.raw.animal_horse_vietnamese,R.drawable.animal_horse); break;
                 case 6: cur_fragment = new AnimalFragment("박쥐","Con dói",R.raw.animal_bat_korean,R.raw.animal_bat_vietnamese,R.drawable.animal_bat); break;
                 case 7: cur_fragment = new AnimalFragment("사자","Sư tử",R.raw.animal_lion_korean,R.raw.animal_lion_vietnamese,R.drawable.animal_lion); break;

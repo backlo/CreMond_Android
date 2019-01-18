@@ -33,15 +33,15 @@ public class BodyActivity extends AppCompatActivity {
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
-                case 0: cur_fragment = new BodyFragment("눈","eyes",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_eyes); break;
-                case 1: cur_fragment = new BodyFragment("코","nose",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_nose); break;
-                case 2: cur_fragment = new BodyFragment("어깨","shoulder",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_shoulder); break;
-                case 3: cur_fragment = new BodyFragment("손","hands",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_hands); break;
-                case 4: cur_fragment = new BodyFragment("무릎","knee",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_knee); break;
-                case 5: cur_fragment = new BodyFragment("입","mouth",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_mouth); break;
-                case 6: cur_fragment = new BodyFragment("팔","arm",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_arm); break;
-                case 7: cur_fragment = new BodyFragment("발","foot",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_foot); break;
-                case 8: cur_fragment = new BodyFragment("귀","ear",R.raw.animal_dog_korean,R.raw.animal_dog_vietnamese,R.drawable.body_ear); break;
+                case 0: cur_fragment = new BodyFragment("눈","Mắt",R.raw.body_eye_korean,R.raw.body_eye_vietnamese,R.drawable.body_eyes); break;
+                case 1: cur_fragment = new BodyFragment("코","Mũi",R.raw.body_nose_korean,R.raw.body_nose_vietnamese,R.drawable.body_nose); break;
+                case 2: cur_fragment = new BodyFragment("어깨","Vai",R.raw.body_shoulder_korean,R.raw.body_shoulder_vietnamese,R.drawable.body_shoulder); break;
+                case 3: cur_fragment = new BodyFragment("손","Bán tay",R.raw.body_hand_korean,R.raw.body_hand_vietnamese,R.drawable.body_hands); break;
+                case 4: cur_fragment = new BodyFragment("무릎","đầu gối",R.raw.body_knee_korean,R.raw.body_knee_vietnamese,R.drawable.body_knee); break;
+                case 5: cur_fragment = new BodyFragment("입","Miệng",R.raw.body_mouth_korean,R.raw.body_mouth_vietnamese,R.drawable.body_mouth); break;
+                case 6: cur_fragment = new BodyFragment("팔","Cánh tay",R.raw.body_arm_korean,R.raw.body_arm_vietnamese,R.drawable.body_arm); break;
+                case 7: cur_fragment = new BodyFragment("발","Bán chân",R.raw.body_foot_korean,R.raw.body_foot_vietnamese,R.drawable.body_foot); break;
+                case 8: cur_fragment = new BodyFragment("귀","Tai",R.raw.body_ear_korean,R.raw.body_ear_vietnamese,R.drawable.body_ear); break;
             }
             return cur_fragment;
         }
