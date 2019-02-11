@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:padding="10dp"
+    android:background="@color/customBackgroundColor"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -28,6 +29,9 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/animal_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -53,6 +57,9 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/job_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -91,6 +98,9 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:id="@+id/body_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -114,11 +124,14 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:id="@+id/objects_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/objects_balloon"
-                        android:layout_weight="1"/>
+                        android:layout_weight="1"
+                        android:src="@drawable/objects_balloon" />
 
                     <TextView
                         android:id="@+id/objects_text"
@@ -153,6 +166,9 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:id="@+id/color_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -176,10 +192,13 @@
                     android:layout_weight="1">
 
                     <ImageView
+                        android:layout_marginTop="30dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
                         android:id="@+id/vehicle_image"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:src="@drawable/ex2"
+                        android:src="@drawable/vehicle_spaceship"
                         android:layout_weight="1"/>
 
                     <TextView
@@ -211,6 +230,9 @@
                 android:layout_weight="1">
 
                 <ImageView
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/plant_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
@@ -236,13 +258,13 @@
                 android:layout_weight="1">
 
                 <ImageView
-                    android:layout_marginTop="50dp"
+                    android:layout_marginTop="30dp"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginRight="20dp"
+                    android:layout_marginRight="10dp"
                     android:id="@+id/number_image"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:src="@drawable/exnumber_one"
+                    android:src="@drawable/number_hundred"
                     android:layout_weight="1"/>
 
                 <TextView

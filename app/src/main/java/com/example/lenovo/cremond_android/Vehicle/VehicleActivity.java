@@ -31,7 +31,7 @@ public class VehicleActivity extends AppCompatActivity {
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
-                case 0: cur_fragment = new VehicleFragment("헬리콥터","Máy bay trực thăng",R.raw.vehicle_helicopter_korean,R.raw.vehicle_helicopter_vietnamese,R.drawable.ex2); break;
+                case 0: cur_fragment = new VehicleFragment("헬리콥터","Máy bay trực thăng",R.raw.vehicle_helicopter_korean,R.raw.vehicle_helicopter_vietnamese,R.drawable.vehicle_helicopter); break;
                 case 1: cur_fragment = new VehicleFragment("구급차","Xe cấp cứu",R.raw.vehicle_ambulance_korean,R.raw.vehicle_ambulance_vietnamese,R.drawable.vehicle_ambulance); break;
                 case 2: cur_fragment = new VehicleFragment("버스","Xe buýt",R.raw.vehicle_bus_korean,R.raw.vehicle_bus_vietnamese,R.drawable.vehicle_bus); break;
                 case 3: cur_fragment = new VehicleFragment("기차","xe lửa",R.raw.vehicle_train_korean,R.raw.vehicle_train_vietnamese,R.drawable.vehicle_train); break;

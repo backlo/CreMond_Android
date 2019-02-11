@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "26647657738",
+    "firebase_url": "https://cremondandroid.firebaseio.com",
+    "project_id": "cremondandroid",
+    "storage_bucket": "cremondandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:26647657738:android:9f1ed17dd88e412f",
+        "android_client_info": {
+          "package_name": "com.example.lenovo.cremond_android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "26647657738-fd62gpha6ksq65864nuvqmbdmifmclhb.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.lenovo.cremond_android",
+            "certificate_hash": "96eed733f97234d482cd7bb229d5b1d21a43c68c"
+          }
+        },
+        {
+          "client_id": "26647657738-a5pnci4oob50c16f1eujou82ibau76oj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3uhab-1B8_0LBS3tDkbLJu-TGO7OXEz8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "26647657738-a5pnci4oob50c16f1eujou82ibau76oj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -31,13 +31,13 @@ public class NumberActivity extends AppCompatActivity {
             if (position < 0 || MAX_PAGE <= position)
                 return null;
             switch (position) {
-                case 0: cur_fragment = new NumberFragment("일","Một",R.raw.number_one_korean,R.raw.number_one_vietnamese,R.drawable.exnumber_one); break;
-                case 1: cur_fragment = new NumberFragment("이","Hai",R.raw.number_two_korean,R.raw.number_two_vietnamese,R.drawable.exnumber_two); break;
-                case 2: cur_fragment = new NumberFragment("삼","Ba",R.raw.number_three_korean,R.raw.number_three_vietnamese,R.drawable.exnumber_three); break;
-                case 3: cur_fragment = new NumberFragment("사","Bốn",R.raw.number_four_korean,R.raw.number_four_vietnamese,R.drawable.exnumber_four); break;
-                case 4: cur_fragment = new NumberFragment("오","Năm",R.raw.number_five_korean,R.raw.number_five_vietnamese,R.drawable.exnumber_five); break;
-                case 5: cur_fragment = new NumberFragment("육","Sáu",R.raw.number_six_korean,R.raw.number_six_vietnamese,R.drawable.exnumber_six); break;
-                case 6: cur_fragment = new NumberFragment("칠","Bảy",R.raw.number_seven_korean,R.raw.number_seven_vietnamese,R.drawable.exnumber_seven); break;
+                case 0: cur_fragment = new NumberFragment("일","Một",R.raw.number_one_korean,R.raw.number_one_vietnamese,R.drawable.number_one); break;
+                case 1: cur_fragment = new NumberFragment("이","Hai",R.raw.number_two_korean,R.raw.number_two_vietnamese,R.drawable.number_two); break;
+                case 2: cur_fragment = new NumberFragment("삼","Ba",R.raw.number_three_korean,R.raw.number_three_vietnamese,R.drawable.number_three); break;
+                case 3: cur_fragment = new NumberFragment("사","Bốn",R.raw.number_four_korean,R.raw.number_four_vietnamese,R.drawable.number_four); break;
+                case 4: cur_fragment = new NumberFragment("오","Năm",R.raw.number_five_korean,R.raw.number_five_vietnamese,R.drawable.number_five); break;
+                case 5: cur_fragment = new NumberFragment("육","Sáu",R.raw.number_six_korean,R.raw.number_six_vietnamese,R.drawable.number_six); break;
+                case 6: cur_fragment = new NumberFragment("칠","Bảy",R.raw.number_seven_korean,R.raw.number_seven_vietnamese,R.drawable.number_seven); break;
                 case 7: cur_fragment = new NumberFragment("팔","Tám",R.raw.number_eight_korean,R.raw.number_eight_vietnamese,R.drawable.number_eight); break;
                 case 8: cur_fragment = new NumberFragment("구","Chín",R.raw.number_nine_korean,R.raw.number_nine_vietnamese,R.drawable.number_nine); break;
                 case 9: cur_fragment = new NumberFragment("십","Mười",R.raw.number_ten_korean,R.raw.number_ten_vietnamese,R.drawable.number_ten); break;
