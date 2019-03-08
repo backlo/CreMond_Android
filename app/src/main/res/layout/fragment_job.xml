@@ -10,61 +10,71 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/layout_rounded"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:padding="30dp"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/jobfragment_home_btn"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_gravity="right"
+            android:src="@drawable/activity_home" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:paddingTop="40dp"
-            android:paddingLeft="30dp"
-            android:paddingRight="30dp"
-            android:layout_weight="3">
+            android:layout_height="0dp"
+            android:layout_weight="0.4"
+            android:orientation="vertical">
 
             <TextView
-                android:fontFamily="@font/namugothic"
                 android:id="@+id/jobfragment_korean"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center|bottom"
-                android:textSize="40dp"
-                android:layout_weight="1"
-                android:text="korean"/>
+                android:layout_height="wrap_content"
+                android:text="korean"
+                android:gravity="center"
+                android:fontFamily="@font/notosans"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/korean_fontsize"
+                android:textStyle="italic" />
 
-            <LinearLayout
-                android:paddingLeft="5dp"
+            <TextView
+                android:id="@+id/jobfragment_vietnamese"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1.5"
-                android:orientation="vertical">
-
-                <ImageView
-                    android:id="@+id/jobfragment_home_btn"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_gravity="right"
-                    android:src="@drawable/activity_home"/>
-
-                <TextView
-                    android:fontFamily="@font/namugothic"
-                    android:id="@+id/jobfragment_vietnamese"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:gravity="bottom"
-                    android:textSize="20dp"
-                    android:layout_weight="1"
-                    android:text="vietnamese"/>
-
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:gravity="center"
+                android:text="vietnamese"
+                android:includeFontPadding="false"
+                android:textSize="@dimen/vietnamese_fontsize"
+                android:textStyle="italic" />
 
         </LinearLayout>
 
         <ImageView
-            android:layout_margin="70dp"
             android:id="@+id/jobfragment_image"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"/>
+            android:layout_height="0dp"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.1">
+
+            <TextView
+                android:id="@+id/jobfragment_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:includeFontPadding="false"
+                android:text="english"
+                android:gravity="center"
+                android:textSize="@dimen/english_fontsize"
+                android:textStyle="italic" />
+
+        </LinearLayout>
 
     </LinearLayout>
 

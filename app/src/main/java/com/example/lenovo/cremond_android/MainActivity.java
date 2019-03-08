@@ -1,11 +1,10 @@
 package com.example.lenovo.cremond_android;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.SystemClock;
+import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -18,6 +17,11 @@ import com.example.lenovo.cremond_android.Number.NumberActivity;
 import com.example.lenovo.cremond_android.Objects.ObjectsActivity;
 import com.example.lenovo.cremond_android.Plant.PlantActivity;
 import com.example.lenovo.cremond_android.Vehicle.VehicleActivity;
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -41,14 +45,21 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.plant_text) TextView plant_text;
     @BindView(R.id.vehicle_image) ImageView vehicle_image;
     @BindView(R.id.vehicle_text) TextView vehicle_text;
+    @BindView(R.id.qr_code) ImageView qr_code;
 
     private long mLastClickTime=0;
+    private IntentIntegrator qrScan;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        qrScan = new IntentIntegrator(this);
+        Intent i = new Intent(this, LoadingActivity.class);
+        startActivity(i);
+
     }
 
     @OnClick({R.id.animal_text, R.id.animal_image})
@@ -132,4 +143,50 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
+    @OnClick(R.id.qr_code)
+    public void startQRCode(){
+        //더블클릭 방지
+        if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
+        mLastClickTime = SystemClock.elapsedRealtime();
+
+        qrScan.setPrompt("Scanning...");
+        qrScan.initiateScan();
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
+
+        if(result != null){
+            if(result.getContents() == null) {
+                Toast.makeText(MainActivity.this, "Cancel..", Toast.LENGTH_SHORT).show();
+            } else{
+                Toast.makeText(MainActivity.this, "Scan Complete!!", Toast.LENGTH_SHORT).show();
+
+                try {
+                    JSONObject obj = new JSONObject(result.getContents());
+
+                    String korean = obj.getString("korean");
+                    String vietnamese = obj.getString("vietnamese");
+//                    int image = obj.getInt("image");
+//                    int speechkorean = obj.getInt("speechkorean");
+//                    int speechvietnamese = obj.getInt("speechvietnamese");
+
+                    Toast.makeText(getApplicationContext(), "한국어 : " + korean + ", 베트남어 : " + vietnamese + "\n 아직 개발중입니다...", Toast.LENGTH_LONG).show();
+
+                    Intent i = new Intent(MainActivity.this,  QRActivity.class);
+//                    i.putExtra("korean",korean);
+//                    i.putExtra("vietnamese", vietnamese);
+//                    i.putExtra("image", image);
+//                    i.putExtra("speechkorean", speechkorean);
+//                    i.putExtra("speechvietnamese", speechvietnamese);
+
+                    startActivity(i);
+
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
 }

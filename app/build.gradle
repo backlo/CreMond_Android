@@ -5,7 +5,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.lenovo.cremond_android"
-        minSdkVersion 26
+        minSdkVersion 24
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -35,4 +35,9 @@ dependencies {
     /*//firebase
     implementation 'com.google.firebase:firebase-storage:16.0.1'
     implementation 'com.google.firebase:firebase-auth:16.0.1'*/
+
+    //QR code
+    implementation 'com.journeyapps:zxing-android-embedded:3.4.0'
+
+    implementation 'org.greenrobot:eventbus:3.1.1'
 }

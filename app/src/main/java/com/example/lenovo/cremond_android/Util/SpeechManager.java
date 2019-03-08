@@ -21,7 +21,7 @@ public class SpeechManager {
         }
 
         audioManager = (AudioManager) mActivity.getSystemService(Context.AUDIO_SERVICE);
-        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 15, 0);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 3, 0);
 
         mediaPlayer = MediaPlayer.create(mActivity, speechName);
         mediaPlayer.start();
