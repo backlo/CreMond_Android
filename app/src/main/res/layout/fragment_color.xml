@@ -9,70 +9,78 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/layout_rounded"
-        android:orientation="vertical"
-        android:padding="30dp"
-        android:weightSum="1">
-
-        <ImageView
-            android:id="@+id/colorfragment_home_btn"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:layout_gravity="right"
-            android:src="@drawable/activity_home" />
+        android:background="@drawable/layout_rounded">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.4"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:background="@drawable/back_port"
+            android:orientation="vertical"
+            android:padding="30dp"
+            android:weightSum="1">
 
-            <TextView
-                android:id="@+id/colorfragment_korean"
+
+            <ImageView
+                android:id="@+id/colorfragment_home_btn"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="right"
+                android:src="@drawable/activity_home" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="korean"
-                android:gravity="center"
-                android:fontFamily="@font/notosans"
-                android:includeFontPadding="false"
-                android:textSize="@dimen/korean_fontsize"
-                android:textStyle="italic" />
+                android:layout_height="0dp"
+                android:layout_weight="0.4"
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/colorfragment_vietnamese"
+                <TextView
+                    android:id="@+id/colorfragment_korean"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="korean"
+                    android:textSize="@dimen/korean_fontsize"
+                    android:textStyle="italic" />
+
+                <TextView
+                    android:id="@+id/colorfragment_vietnamese"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="vietnamese"
+                    android:textSize="@dimen/vietnamese_fontsize"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/colorfragment_image"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/notosans"
-                android:gravity="center"
-                android:text="vietnamese"
-                android:includeFontPadding="false"
-                android:textSize="@dimen/vietnamese_fontsize"
-                android:textStyle="italic" />
+                android:layout_height="0dp"
+                android:layout_weight="0.5"
+                android:gravity="center" />
 
-        </LinearLayout>
-
-        <ImageView
-            android:id="@+id/colorfragment_image"
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.5"
-            android:gravity="center" />
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="0.1">
-
-            <TextView
-                android:id="@+id/colorfragment_english"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:fontFamily="@font/notosans"
-                android:includeFontPadding="false"
-                android:text="english"
-                android:gravity="center"
-                android:textSize="@dimen/english_fontsize"
-                android:textStyle="italic" />
+                android:layout_height="0dp"
+                android:layout_weight="0.1">
+
+                <TextView
+                    android:id="@+id/colorfragment_english"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/notosans"
+                    android:gravity="center"
+                    android:includeFontPadding="false"
+                    android:text="english"
+                    android:textSize="@dimen/english_fontsize"
+                    android:textStyle="italic" />
+
+            </LinearLayout>
 
         </LinearLayout>
 
