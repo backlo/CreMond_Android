@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Animal.AnimalFragment"
+    android:background="@drawable/layout_rounded"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <ImageView
+        android:id="@+id/animalfragment_home_btn"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="right"
+        android:src="@drawable/activity_home" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <ImageView
+            android:id="@+id/animalfragment_image"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="0.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/animalfragment_korean"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="korean"
+                android:textSize="@dimen/korean_fontsize"
+                android:textStyle="italic" />
+
+            <TextView
+                android:id="@+id/animalfragment_vietnamese"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="vietnamese"
+                android:textSize="@dimen/vietnamese_fontsize"
+                android:textStyle="italic" />
+
+
+            <TextView
+                android:id="@+id/animalfragment_english"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/notosans"
+                android:gravity="center"
+                android:includeFontPadding="false"
+                android:text="english"
+                android:textSize="@dimen/english_fontsize"
+                android:textStyle="italic" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

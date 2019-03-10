@@ -46,8 +46,6 @@ public class PlantFragment extends Fragment {
     TextToSpeech tts = null;
     private final int ACT_CHECK_TTS_DATA = 1000;
 
-    AudioManager audioManager;
-
     public PlantFragment() {   }
 
     @SuppressLint("ValidFragment")
@@ -118,8 +116,6 @@ public class PlantFragment extends Fragment {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
-
-        audioManager = (AudioManager) getActivity().getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
 
         EventBus.getDefault().post(new TTSEvent(""));
         tts = new TextToSpeech(getActivity().getApplicationContext(), new TextToSpeech.OnInitListener() {

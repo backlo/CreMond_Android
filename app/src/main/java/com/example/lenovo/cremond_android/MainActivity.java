@@ -1,6 +1,12 @@
 package com.example.lenovo.cremond_android;
 
+import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
+import android.media.AudioManager;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -29,32 +35,55 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
 
-    @BindView(R.id.animal_image) ImageView animal_image;
-    @BindView(R.id.animal_text) TextView animal_text;
-    @BindView(R.id.body_image) ImageView body_image;
-    @BindView(R.id.body_text) TextView body_text;
-    @BindView(R.id.color_image) ImageView color_image;
-    @BindView(R.id.color_text) TextView color_text;
-    @BindView(R.id.job_image) ImageView job_image;
-    @BindView(R.id.job_text) TextView job_text;
-    @BindView(R.id.number_image) ImageView number_image;
-    @BindView(R.id.number_text) TextView number_text;
-    @BindView(R.id.objects_image) ImageView objects_image;
-    @BindView(R.id.objects_text) TextView objects_text;
-    @BindView(R.id.plant_image) ImageView plant_image;
-    @BindView(R.id.plant_text) TextView plant_text;
-    @BindView(R.id.vehicle_image) ImageView vehicle_image;
-    @BindView(R.id.vehicle_text) TextView vehicle_text;
-    @BindView(R.id.qr_code) ImageView qr_code;
+    @BindView(R.id.animal_image)
+    ImageView animal_image;
+    @BindView(R.id.animal_text)
+    TextView animal_text;
+    @BindView(R.id.body_image)
+    ImageView body_image;
+    @BindView(R.id.body_text)
+    TextView body_text;
+    @BindView(R.id.color_image)
+    ImageView color_image;
+    @BindView(R.id.color_text)
+    TextView color_text;
+    @BindView(R.id.job_image)
+    ImageView job_image;
+    @BindView(R.id.job_text)
+    TextView job_text;
+    @BindView(R.id.number_image)
+    ImageView number_image;
+    @BindView(R.id.number_text)
+    TextView number_text;
+    @BindView(R.id.objects_image)
+    ImageView objects_image;
+    @BindView(R.id.objects_text)
+    TextView objects_text;
+    @BindView(R.id.plant_image)
+    ImageView plant_image;
+    @BindView(R.id.plant_text)
+    TextView plant_text;
+    @BindView(R.id.vehicle_image)
+    ImageView vehicle_image;
+    @BindView(R.id.vehicle_text)
+    TextView vehicle_text;
+    @BindView(R.id.qr_code)
+    ImageView qr_code;
 
-    private long mLastClickTime=0;
+    private long mLastClickTime = 0;
     private IntentIntegrator qrScan;
+
+    AudioManager audioManager;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
+
+        audioManager = (AudioManager) getApplicationContext().getSystemService(Context.AUDIO_SERVICE);
+        audioManager.setStreamVolume(AudioManager.STREAM_MUSIC, 5, 0);
 
         qrScan = new IntentIntegrator(this);
         Intent i = new Intent(this, LoadingActivity.class);
@@ -63,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.animal_text, R.id.animal_image})
-    public void animalOnClick(){
+    public void animalOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -73,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.body_text, R.id.body_image})
-    public void bodyOnClick(){
+    public void bodyOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -83,7 +112,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.color_text, R.id.color_image})
-    public void colorOnClick(){
+    public void colorOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -94,7 +123,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.job_text, R.id.job_image})
-    public void jobOnClick(){
+    public void jobOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -104,7 +133,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.number_text, R.id.number_image})
-    public void numberOnClick(){
+    public void numberOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -114,7 +143,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.objects_text, R.id.objects_image})
-    public void objectsOnClick(){
+    public void objectsOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -124,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.plant_text, R.id.plant_image})
-    public void plantOnClick(){
+    public void plantOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -134,7 +163,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick({R.id.vehicle_text, R.id.vehicle_image})
-    public void vehicleOnClick(){
+    public void vehicleOnClick() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -144,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @OnClick(R.id.qr_code)
-    public void startQRCode(){
+    public void startQRCode() {
         //더블클릭 방지
         if (SystemClock.elapsedRealtime() - mLastClickTime < 2000) return;
         mLastClickTime = SystemClock.elapsedRealtime();
@@ -157,10 +186,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         IntentResult result = IntentIntegrator.parseActivityResult(requestCode, resultCode, data);
 
-        if(result != null){
-            if(result.getContents() == null) {
+        if (result != null) {
+            if (result.getContents() == null) {
                 Toast.makeText(MainActivity.this, "Cancel..", Toast.LENGTH_SHORT).show();
-            } else{
+            } else {
                 Toast.makeText(MainActivity.this, "Scan Complete!!", Toast.LENGTH_SHORT).show();
 
                 try {
@@ -174,7 +203,7 @@ public class MainActivity extends AppCompatActivity {
 
                     Toast.makeText(getApplicationContext(), "한국어 : " + korean + ", 베트남어 : " + vietnamese + "\n 아직 개발중입니다...", Toast.LENGTH_LONG).show();
 
-                    Intent i = new Intent(MainActivity.this,  QRActivity.class);
+                    Intent i = new Intent(MainActivity.this, QRActivity.class);
 //                    i.putExtra("korean",korean);
 //                    i.putExtra("vietnamese", vietnamese);
 //                    i.putExtra("image", image);
@@ -189,4 +218,18 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+
+        if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT) {
+            setContentView(R.layout.activity_main);
+            ButterKnife.bind(this);
+        } else if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            setContentView(R.layout.activity_main);
+            ButterKnife.bind(this);
+        }
+    }
+
 }

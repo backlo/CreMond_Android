@@ -9,23 +9,41 @@
         android:roundIcon="@mipmap/icon"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".LoadingActivity"/>
+        <activity android:name=".LoadingActivity"
+            android:configChanges="orientation"/>
         <activity android:name=".QRActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:configChanges="orientation|screenSize">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Animal.AnimalActivity" />
-        <activity android:name=".Body.BodyActivity" />
-        <activity android:name=".Color.ColorActivity" />
-        <activity android:name=".Job.JobActivity" />
-        <activity android:name=".Number.NumberActivity" />
-        <activity android:name=".Objects.ObjectsActivity" />
-        <activity android:name=".Plant.PlantActivity" />
-        <activity android:name=".Vehicle.VehicleActivity" />
+        <activity android:name=".Animal.AnimalActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Body.BodyActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Color.ColorActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Job.JobActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Number.NumberActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Objects.ObjectsActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Plant.PlantActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".Vehicle.VehicleActivity"
+            android:configChanges="orientation|screenSize"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
